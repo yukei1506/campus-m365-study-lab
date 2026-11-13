@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="大学生のための OneDrive と Teams の操作練習。クラウド、フォルダー、授業、ファイル共有を学べます。">
+<title>キャンパス Microsoft 365 入門</title>
+<style>
+:root{--navy:#142b35;--teal:#006c59;--mint:#e2f4eb;--paper:#f5f7f1;--line:#d7e1da;--muted:#4b625d;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--navy);font:16px/1.8 "Atkinson Hyperlegible Next","Yu Gothic",Meiryo,sans-serif}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #bc5918;outline-offset:3px}a{color:var(--teal)}header{background:var(--navy);color:white}.bar,.layout,footer{max-width:1250px;margin:auto;padding:0 34px}.bar{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:800;letter-spacing:.03em}.brand span{display:inline-grid;place-items:center;background:#c7f2d8;color:#163d36;border-radius:10px;width:36px;height:36px;margin-right:10px}.progress{display:flex;align-items:center;gap:12px;font-size:.85rem}progress{width:100px;accent-color:#a5e6bd}.layout{display:grid;grid-template-columns:244px minmax(0,1fr);gap:38px;margin:34px auto}.side h2{font-size:.85rem;margin:0 0 10px;color:var(--muted)}nav{display:grid;gap:6px}nav button{text-align:left;display:flex;align-items:center;gap:10px;color:var(--navy);padding:9px 10px;border:1px solid transparent;background:transparent;border-radius:10px;line-height:1.45;font-size:.9rem}nav button:hover,nav button[aria-current]{background:var(--mint);border-color:#b7d9c9}nav b{display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:8px;background:#fff;color:var(--teal);font-size:.75rem}.hero{background:#dceee4;border:1px solid #d0e7db;border-radius:22px;padding:29px 32px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-35px;top:-85px;width:225px;height:225px;border:32px solid #cde6d8;border-radius:50%;pointer-events:none}.hero>*{position:relative;z-index:1}.tag,.hint{font-size:.82rem;color:var(--teal);font-weight:700;letter-spacing:.045em}h1{font-size:clamp(1.7rem,4.2vw,2.7rem);margin:5px 0;line-height:1.32;letter-spacing:-.035em}h2{font-size:1.25rem;margin:0 0 10px}h3{margin:0 0 5px;font-size:1rem}p{margin:0 0 10px}.hero p{max-width:590px;margin:12px 0 0}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:22px 25px;margin-top:18px}.demo{padding:0;overflow:hidden}.demohead{padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:10px}.demohead h2{margin:0}.chip{font-size:.76rem;background:#edf3ef;color:#35544a;border-radius:20px;padding:3px 10px;white-space:nowrap}.screen{background:#f5faf7;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-height:155px;padding:22px 24px}.demobar{padding:14px 24px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:9px;background:white;color:var(--navy);padding:7px 13px;font-weight:700;font-size:.86rem}.btn:hover{background:var(--mint)}.primary{background:var(--teal);border-color:var(--teal);color:white}.primary:hover{background:#005244}.scene{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px}.node{min-width:0;text-align:center;border:1px solid #bdd7c9;background:#fff;border-radius:12px;padding:12px 5px;font-weight:700;font-size:.86rem}.node strong{display:block;font-size:1.65rem}.node small{display:block;color:var(--muted);overflow-wrap:anywhere}.arrow{color:#5b7a6f;font-weight:800}.active{outline:2px solid #008267;background:#e0f6e9;animation:pulse .55s ease-out}.flash{animation:enter .35s ease-out}@keyframes enter{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@keyframes pulse{from{box-shadow:0 0 0 8px #81d6ac80}to{box-shadow:0 0 0 0 #81d6ac00}}.caption{margin:13px 0 0;font-size:.9rem;color:#35544a}.fake{border:1px solid #c4d3d5;background:white;border-radius:10px;overflow:hidden}.fakebar{background:#e9f0f7;padding:8px 13px;font-weight:800;color:#163d63;font-size:.9rem}.teams .fakebar{background:#eae7fb;color:#403583}.fakebody{padding:13px}.fakebody button{margin:3px 4px 3px 0}.tree{display:grid;grid-template-columns:1fr 1.6fr;gap:12px}.treeaside{border-right:1px solid var(--line);padding-right:8px}.treeaside button{display:block;text-align:left;font-size:.8rem;padding:4px 6px}.path{overflow-wrap:anywhere;font-size:.82rem;color:#28554a;font-weight:700}.file{margin-top:8px;padding:7px 10px;background:#f3f6fa;border-radius:6px;font-size:.88rem;overflow-wrap:anywhere}.choices{display:grid;gap:7px}.choices button{text-align:left}.choices button[aria-pressed=true],.btn[aria-pressed=true]{border-color:#008267;background:var(--mint);color:#005244}.feedback{margin:8px 0 0;font-size:.9rem;font-weight:700}.correct{color:#00624a}.wrong{color:#a34315}ol,ul{padding-left:1.4em;margin:6px 0}li+li{margin-top:5px}.end{display:flex;justify-content:space-between;gap:8px;margin-top:17px}footer{padding-bottom:38px;font-size:.83rem;color:var(--muted)}footer details{border-top:1px solid var(--line);padding-top:10px}.people{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}.person{background:#f0f2f4;padding:8px;border-radius:8px;text-align:center;font-size:.78rem}.person strong{display:block}.allowed{background:var(--mint);color:#005440}.blocked{background:#f8ebe4;color:#82421f}.group{margin-bottom:8px}.group strong{display:block;font-size:.83rem}.small{font-size:.85rem;color:var(--muted)}[hidden]{display:none!important}@media(max-width:790px){.layout{grid-template-columns:1fr;gap:19px;margin-top:19px}.bar,.layout,footer{padding-inline:16px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.hero,.card{padding:18px}.card.demo{padding:0}.demohead,.screen,.demobar{padding:13px}.bar{flex-wrap:wrap;padding-block:8px;gap:3px}.scene{gap:5px}.node{font-size:.75rem}.tree{grid-template-columns:1fr 1.3fr}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+<header><div class="bar"><div class="brand"><span aria-hidden="true">M</span>キャンパス Microsoft 365 入門</div><div class="progress"><label for="progress">学習進捗 <span id="count">0 / 8</span></label><progress id="progress" value="0" max="8"></progress></div></div></header>
+<div class="layout"><aside class="side"><h2>学びたい章を選ぶ</h2><nav id="chapters" aria-label="章一覧"></nav></aside><main id="main"></main></div>
+<footer><p>練習画面は架空のデータを使った模式図です。実際の画面や使える機能は大学の設定、端末、アプリのバージョンによって変わります。学習進捗はこのブラウザーに保存します。</p><details><summary>Microsoft 公式ガイド</summary><ul>
+<li><a href="https://support.microsoft.com/ja-jp/onedrive/share-files-and-folders-in-microsoft-onedrive">OneDrive のファイルとフォルダーを共有する</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/onedrive/sharepoint/manage-sharing-and-permissions-in-onedrive-and-sharepoint">共有とアクセス許可を管理する</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/teams/files/file-storage-in-microsoft-teams">Teams のファイルの保存先</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/teams/meetings/join-a-meeting-in-microsoft-teams">Teams 会議に参加する</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/teams/teams-channels/standard-private-or-shared-channels-in-microsoft-teams">Teams のチャネルと公開範囲</a></li>
+</ul></details></footer>
+<script>
+const lessons = [
+  {short:'クラウドとは？', title:'クラウドは、ネットの先にある保存場所', intro:'OneDrive に保存した授業資料を、大学のパソコンと自分のスマホで開く流れを見てみましょう。', demo:'保存からスマホで開くまで',
+   notes:['クラウドとは、インターネットを通じて使うサーバー上のサービスです。OneDrive はその一つで、ファイルを預けて管理できます。','PC の「ダウンロード」に保存しただけのファイルは、その PC にあります。ブラウザーで OneDrive にアップロードすると、クラウドにもファイルが置かれます。','スマホで見るときは、同じ大学アカウントで OneDrive を開きます。ネットがない場所で使う場合は、事前にオフラインで使えるように準備します。','同期は変更をほかの端末やクラウドに反映するしくみです。同期フォルダーで削除するとクラウド側にも反映されることがあります。共有は、ほかの人にアクセスを許可する操作です。'],
+   q:'PC の「ダウンロード」にだけある PDF を、スマホの OneDrive で開くには？', options:['PC のファイル名を変更する','PDF を OneDrive にアップロードし、スマホで同じ大学アカウントを開く','スマホで Teams の通知をオンにする'], answer:1, why:'OneDrive にアップロードしたファイルは、同じアカウントで別の端末から開けます。'},
+  {short:'フォルダーと階層', title:'フォルダーをたどって、ファイルを見つける', intro:'フォルダーは資料をまとめる入れ物です。中に別のフォルダーを作ると、親子関係のある階層になります。', demo:'フォルダーを開いて現在地を確認',
+   notes:['いちばん上を「ルート」と呼びます。この画面では「マイ ファイル」です。その下に「大学」、さらに授業名のフォルダーがあります。','パスはファイルやフォルダーの住所です。「マイ ファイル › 大学 › 情報リテラシー」のように、上から順にたどります。','別々のフォルダーに「第1回.pdf」があるときは、ファイル名と保存場所を一緒に確認しましょう。上の階層に戻ると、別の授業に移れます。'],
+   q:'2つの授業に「第1回.pdf」があります。情報リテラシーの資料を見分けるには？', options:['ファイル名だけを見る','一覧の一番上を選ぶ','保存場所のパスを確認する'], answer:2, why:'同じ名前でも、親フォルダーが違えば保存場所も異なります。'},
+  {short:'OneDrive の基本',title:'OneDrive に授業資料を保存する',intro:'大学アカウントでサインインし、「マイ ファイル」から保存先のフォルダーを開くところから始めます。',demo:'授業フォルダーを作って保存',
+   notes:['大学の案内にある Microsoft 365 の入口を開き、大学から発行されたアカウントでサインインします。画面右上のプロフィールでアカウントを確認できます。','OneDrive で「マイ ファイル」を開き、フォルダーを作ります。フォルダーに入ってからアップロードすると、目的の場所に整理できます。','保存後はファイル名と現在地を確認します。場所が分からなくなったらファイル名で検索し、検索結果の保存先を確認します。削除した場合は、まず OneDrive のごみ箱を探します。'],
+   q:'アップロードしたはずの資料が見えません。最初に何を確認しますか？',options:['大学アカウント、保存先フォルダー、アップロード結果','スマホの壁紙','会議のカメラ設定'],answer:0,why:'アカウントやフォルダーが違うと、保存済みでも今の画面には表示されません。'},
+  {short:'Teams のチャットとチャネル',title:'Teams で、話す相手と場所を選ぶ',intro:'チャットは個人や少人数との会話です。チャネルは、チームの中で授業やテーマごとの話題をまとめる場所です。',demo:'同じ連絡でも、投稿先で読める人が変わる',
+   notes:['1人に聞きたいときは、チャットで相手を選びます。同姓の人がいるときは、名前と大学のメールアドレスを確認します。','授業のチーム全体に知らせるときは、適切な標準チャネルを選びます。特定の話題への返事は、元の投稿に返信すると流れが追いやすくなります。','標準チャネルはチームのメンバーに表示されます。プライベート・共有チャネルは参加範囲が異なるので、投稿前にメンバーを確かめます。'],
+   q:'班員1人だけに集合時間を確認するとき、どこに書きますか？',options:['授業チームの標準チャネル','相手との1対1チャット','別の授業のチーム'],answer:1,why:'個別チャットを開き、相手の名前とアドレスを確認してから送ります。'},
+  {short:'Teams の会議',title:'オンライン授業に参加する',intro:'招待リンクや Teams の予定表から、授業の会議を開きます。入室前にマイクとカメラを確認できます。',demo:'入室前の画面を操作する',
+   notes:['開始時刻を確認して会議を開きます。大学のアカウントが必要な授業では、サインインしてから参加します。','入室前にマイクとカメラの状態を確認します。授業の指示に合わせ、発言するときにマイクをオンにします。ロビーで待つ画面が出たら、主催者の許可を待ちます。','画面共有では、発表資料が入ったウィンドウを選べる場合はそのウィンドウを選びます。通知や他のタブが映らないように確認します。録画や画面の保存は授業のルールに従います。'],
+   q:'発表用のスライドだけを見せたいときは？',options:['デスクトップ全体を共有する','会議リンクを外に転送する','スライドのウィンドウを選んで共有する'],answer:2,why:'共有範囲をウィンドウに絞ると、別のアプリやタブの表示を避けやすくなります。'},
+  {short:'共同編集とファイルの場所',title:'Teams で渡したファイルはどこにある？',intro:'グループ課題では、ファイルを置く場所と、誰が編集できるかを決めておくと迷いません。',demo:'添付先を変えて保存先を確認',
+   notes:['Teams のチャットに端末からアップロードしたファイルは、送信者の OneDrive に保存され、会話の相手と共有されます。','チャネルにアップロードしたファイルは、そのチャネルの SharePoint に保存されます。SharePoint はチームでファイルを保管・管理するサービスです。','班で Word などを共同編集する場合は、同じファイルを開けるリンクを使い、必要な班員だけに編集権限を付けます。すでにあるファイルのリンクを貼った場合は元の保存先とアクセス権を確認します。'],
+   q:'班員みんなで同じ Word の原稿を更新するには？',options:['同じ共有ファイルを開き、必要な班員に編集権限を付ける','全員が別のコピーを作り、同じ名前で保存する','自分の PC のダウンロードフォルダーのパスを送る'],answer:0,why:'共同編集では同じファイルを使い、編集が必要な人に権限を渡します。'},
+  {short:'共有リンクと外部ゲスト',title:'共有リンクで、誰が開けるかを確かめる',intro:'学外の協力者に、イベントの案内 PDF を見せる場面です。公開範囲と権限を変えて、リンクが転送された場合を試してみましょう。',demo:'共有リンクのシミュレーター',
+   notes:['共有前に、大学が学外共有を許可しているか確認します。ファイルの中身と宛先を見直し、必要なファイルだけを選びます。フォルダーを共有すると、その中の別の資料まで見える場合があります。','「特定のユーザー」は指定した相手に権限を付けます。「組織内」はリンクを受け取った同じ組織の人に広がり得ます。「リンクを知っている全員」は学外への転送先でも開ける場合があります。大学の設定で一部の選択肢が表示されないことがあります。','閲覧だけで足りる場合は「表示可能」を選びます。閲覧権限でも設定次第でダウンロードでき、画面撮影などでコピーされる可能性があります。編集を許可すると内容を書き換えられます。','外部の人を Teams のチームにゲスト追加すると、参加先のチャネルやファイルにアクセスできる場合があります。チームへの招待、会議への招待、ファイル共有はそれぞれ範囲を確認しましょう。'],
+   q:'学外の協力者1人に、許可を得た案内 PDF を読んでもらう設定は？',options:['リンクを知っている全員 ＋ 編集可能','大学の組織内 ＋ 表示可能','特定のユーザー ＋ 表示可能'],answer:2,why:'相手の正しいアドレスを指定し、読むために必要な権限を付けます。'},
+  {short:'誤共有・怪しいリンクへの対応',title:'共有ミスに気づいたら、アクセスを止める',intro:'学籍番号が載った資料を、広い範囲で開けるリンクにしてしまった場面を練習します。',demo:'アクセスの管理でリンクを無効にする',
+   notes:['該当ファイルの「アクセスの管理」を開き、誤って作ったリンクを削除します。必要に応じ、直接付与した権限やチーム・フォルダー経由の権限も確認します。変更できないときは、所有者や大学の窓口に連絡します。','個人情報や未公開資料が含まれていたら、共有した資料・日時・範囲・行った対応を控え、授業担当者や大学指定の窓口へ速やかに連絡します。リンクを消しても、すでに保存されたコピーは回収できません。','見覚えのない共有通知や再ログインを求めるリンクは、送り主に別の経路で確認します。大学の公式入口からサービスを開き、パスワードや確認コードを入力してしまった場合は大学の窓口にすぐ連絡します。'],
+   q:'チャットに貼った広い公開範囲のリンクを止めるには？',options:['チャットのメッセージだけを削除する','ファイルの「アクセスの管理」で該当リンクを無効にする','ファイルのアイコンを変更する'],answer:1,why:'チャットからリンクの文字を消しても、すでに受け取った人のリンクは残ります。元の共有設定を確認します。'}
+];
+const $ = id => document.getElementById(id);
+let completed = new Set();
+try {
+  const saved = JSON.parse(localStorage.getItem('campus365-progress') || '[]');
+  if (Array.isArray(saved)) completed = new Set(saved.filter(n => Number.isInteger(n) && n >= 0 && n < lessons.length));
+} catch {}
+let index = 0, state, autoplay, answered;
+const btn = (label, action, active, primary = false) => `<button type="button" class="btn ${primary ? 'primary' : ''}" data-action="${action}" ${typeof active === 'boolean' ? 'aria-pressed="'+active+'"' : ''}>${label}</button>`;
+const frame = (title, body, teams = false) => `<div class="fake ${teams?'teams':''}"><div class="fakebar">${title}</div><div class="fakebody">${body}</div></div>`;
+const caption = message => `<p class="caption" role="status">${message}</p>`;
+const group = (title, content) => `<div class="group" role="group" aria-label="${title}"><strong>${title}</strong>${content}</div>`;
+function fresh() {
+  return {step:0, folder:0, place:'chat', posted:false, mic:false, camera:false, joined:false, target:'specific', access:'view', forwarded:false};
+}
+function updateProgress() {
+  $('count').textContent = `${completed.size} / ${lessons.length}`;
+  $('progress').value = completed.size;
+  $('chapters').innerHTML = lessons.map((lesson, n) => `<button data-chapter="${n}" ${n===index?'aria-current="step"':''}><b>${String(n+1).padStart(2,'0')}</b><span>${lesson.short}${completed.has(n)?' <span aria-label="完了">✓</span>':''}</span></button>`).join('');
+}
+function show(n, focus = true) {
+  clearInterval(autoplay);
+  autoplay = null;
+  index = n;
+  state = fresh();
+  answered = false;
+  const lesson = lessons[n];
+  updateProgress();
+  $('main').innerHTML = `<section class="hero"><div class="tag">第 ${n+1} 章 / ${lessons.length}</div><h1 id="heading" tabindex="-1">${lesson.title}</h1><p>${lesson.intro}</p></section>
+    <section class="card demo"><div class="demohead"><h2>${lesson.demo}</h2><span class="chip">操作デモ</span></div><div id="screen" class="screen"></div><div class="demobar" id="controls"></div></section>
+    <section class="card"><h2>操作のポイント</h2><ol>${lesson.notes.map(note => '<li>'+note+'</li>').join('')}</ol></section>
+    <section class="card"><h2>確認クイズ</h2><p>${lesson.q}</p><div class="choices">${lesson.options.map((option,i)=>btn(option,'quiz-'+i,false)).join('')}</div><p id="feedback" role="status" class="feedback"></p><div class="end">${n>0?btn('← 前の章','previous'):'<span></span>'}${n<lessons.length-1?btn('次の章 →','next',null,true):btn('最初の章に戻る','home',null,true)}</div></section>`;
+  demo();
+  if (focus) { $('heading').focus({preventScroll:true}); window.scrollTo(0,0); }
+}
+function cloud() {
+  const items = [['💻','大学のPC','第1回.pdf'],['☁','OneDrive',state.step>0?'保存済み':'アップロード待ち'],['📱','スマホ',state.step>1?'資料を表示':'同じ大学アカウント']];
+  return `<div class="scene">${items.map(([icon,name,detail],i)=>`${i?'<span class="arrow" aria-hidden="true">→</span>':''}<div class="node ${i===state.step?'active':''}"><strong aria-hidden="true">${icon}</strong>${name}<small>${detail}</small></div>`).join('')}</div>` + caption(['① PDF は PC の中にあります。','② OneDrive にアップロードできました。','③ 同じ大学アカウントのスマホで開けました。'][state.step]);
+}
+function folders() {
+  const names = ['マイ ファイル','大学','情報リテラシー','経済学'];
+  const contents = [
+    btn('📁 大学','folder-1'),
+    btn('📁 情報リテラシー','folder-2') + btn('📁 経済学','folder-3'),
+    '<div class="file">📄 第1回.pdf <small>（情報リテラシーの授業資料）</small></div>',
+    '<div class="file">📄 第1回.pdf <small>（経済学の授業資料）</small></div>'
+  ];
+  const ancestors = [[0],[0,1],[0,1,2],[0,1,3]][state.folder];
+  const tree = names.map((name,i)=>`<div style="padding-left:${[0,6,12,12][i]}px">${btn('📁 '+name,'folder-'+i,i===state.folder)}</div>`).join('');
+  return frame('OneDrive　/　フォルダーの階層',`<div class="tree"><div class="treeaside">${tree}</div><div><div class="path" role="status">現在地　${ancestors.map(i=>names[i]).join(' › ')}</div>${contents[state.folder]}${state.folder?btn('↑ 上の階層','folder-'+ancestors.at(-2)):''}</div></div>`) + caption('2つの授業フォルダーを開き、「第1回.pdf」の保存場所を比べましょう。');
+}
+function upload() {
+  const panels = [btn('＋ 新しいフォルダーを作る','advance'),btn('📁 情報リテラシー を開く','advance'),btn('↑ 第1回.pdf をアップロード','advance'),'<div class="file">📄 第1回.pdf　✓ アップロード完了</div>'];
+  return frame('OneDrive　/　大学アカウント',`<div class="path">マイ ファイル${state.step>1?' › 情報リテラシー':''}</div>${panels[state.step]}`) + caption(['練習用の授業フォルダーを作ります。','作ったフォルダーを開きます。','練習用 PDF をアップロードします。','名前と現在地を確認しましょう。'][state.step]);
+}
+function placeDemo(files) {
+  const chat = state.place==='chat';
+  const recipient = chat?'佐藤さんとのチャット':'情報リテラシー › 一般（標準チャネル）';
+  return frame('Microsoft Teams',group('場所を選ぶ',btn('チャット','chat',chat)+btn('標準チャネル','channel',!chat))+
+    `<div class="path">${recipient}</div><div class="file">${state.posted?(files?'📄 発表原稿.docx':'次回の集合は13時です。'):(files?'添付するファイル　発表原稿.docx':'入力中　次回の集合は13時です。')}</div>`+
+    (state.posted?'':btn(files?'練習ファイルを添付':'練習メッセージを送信','post',null,true)),true)+
+    caption(files?(state.posted?(chat?'チャットへのアップロード → 送信者の OneDrive に保存。会話相手と共有されます。':'チャネルへのアップロード → チャネルの SharePoint に保存。チャネルのアクセス権が適用されます。'):'場所を選んで添付すると、保存先が分かります。'):(chat?'このチャットの参加者が読めます。':'授業チームのメンバーが読めます。'));
+}
+function meeting() {
+  return frame('Microsoft Teams　/　情報リテラシーの授業',
+    state.joined?`<div class="file">会議に参加中　🎙 ${state.mic?'オン':'オフ'}　📷 ${state.camera?'オン':'オフ'}</div>${btn('退出','leave')}`:
+    `<div class="file">入室前のプレビュー</div>${btn('マイク '+(state.mic?'オン':'オフ'),'mic',state.mic)}${btn('カメラ '+(state.camera?'オン':'オフ'),'camera',state.camera)}${btn('今すぐ参加','join',null,true)}`,true)+
+    caption(state.joined?'練習の会議に参加しました。':'練習ではマイクやカメラを操作する流れだけを再現します。');
+}
+function sharing() {
+  const audience = [
+    ['協力者（学外）',state.target!=='org'],
+    ['別の学生（同じ大学）',state.forwarded && state.target!=='specific'],
+    ['知らない人（学外）',state.forwarded && state.target==='any']
+  ];
+  return frame('OneDrive　/　イベント案内.pdf のリンク設定',
+    group('リンクの対象',btn('特定のユーザー','specific',state.target==='specific')+btn('組織内','org',state.target==='org')+btn('リンクを知っている全員','any',state.target==='any'))+
+    group('操作の権限',btn('表示可能','view',state.access==='view')+btn('編集可能','edit',state.access==='edit'))+
+    btn(state.forwarded?'転送済み（押すと元に戻る）':'リンクが転送された場合を試す','forward',state.forwarded)+
+    `<div class="people" role="status">${audience.map(([name,allowed])=>`<div class="person ${allowed?'allowed':'blocked'}">${name}<strong>${allowed?(state.access==='view'?'表示できる':'編集できる'):'開けない'}</strong></div>`).join('')}</div>`)+
+    caption('協力者のメールアドレスを指定済みと仮定します。3人とも、もともとのアクセス権は持っていません。');
+}
+function stopSharing() {
+  const panels = [btn('⋯ アクセスの管理','advance'),'<div class="file">リンクを知っている全員・表示可能</div>'+btn('このリンクを削除','advance'),'<div class="file">リンクを削除しました</div>'];
+  return frame('OneDrive　/　演習用の名簿.xlsx',panels[state.step])+caption(['誤って共有したファイルのアクセスを調べます。','広い公開範囲のリンクを選んで削除します。','このリンクは使えなくなりました。直接付与した権限や別のリンクがあれば、あわせて確認します。'][state.step]);
+}
+function demo() {
+  const focusAction = document.activeElement?.dataset.action;
+  const screens = [cloud,folders,upload,()=>placeDemo(false),meeting,()=>placeDemo(true),sharing,stopSharing];
+  $('screen').innerHTML = screens[index]();
+  $('controls').innerHTML = (index===0?btn(autoplay?'一時停止':'▶ 自動で見る','play',null,true)+btn('次の場面','advance'): '')+
+    btn('デモをリセット','reset')+'<span class="small">練習用の操作です。実際の送信・共有は行われません。</span>';
+  if (focusAction) {
+    const same = [...$('main').querySelectorAll('button')].find(button=>button.dataset.action===focusAction);
+    (same || $('screen').querySelector('button') || $('controls').querySelector('button')).focus({preventScroll:true});
+  }
+}
+function action(name) {
+  if (name.startsWith('quiz-')) {
+    const lesson = lessons[index];
+    const selected = Number(name.slice(5));
+    const correct = selected === lesson.answer;
+    if (correct && !answered) {
+      answered = true;
+      completed.add(index);
+      try { localStorage.setItem('campus365-progress', JSON.stringify([...completed])); } catch {}
+      updateProgress();
+    }
+    document.querySelectorAll('.choices button').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===selected)));
+    $('feedback').className = 'feedback '+(correct?'correct':'wrong');
+    $('feedback').textContent = correct?'正解。'+lesson.why:'もう一度考えてみましょう。操作のポイントやデモを見直せます。';
+    return;
+  }
+  if (name==='next') return navigate(index+1);
+  if (name==='previous') return navigate(index-1);
+  if (name==='home') return navigate(0);
+  if (name==='play') {
+    if (autoplay) { clearInterval(autoplay); autoplay=null; }
+    else {
+      state.step=0;
+      autoplay=setInterval(()=>{
+        state.step++;
+        if(state.step===2){clearInterval(autoplay);autoplay=null;}
+        demo();
+      },1400);
+    }
+  } else if (name==='reset') {
+    clearInterval(autoplay); autoplay=null; state=fresh();
+  } else if (name==='advance') {
+    clearInterval(autoplay); autoplay=null;
+    state.step = index===0 ? (state.step+1)%3 : Math.min(state.step+1,index===2?3:2);
+  } else if (name.startsWith('folder-')) state.folder=Number(name.slice(7));
+  else if (['chat','channel'].includes(name)) { state.place=name; state.posted=false; }
+  else if (name==='post') state.posted=true;
+  else if (name==='join' || name==='leave') state.joined=name==='join';
+  else if (['mic','camera'].includes(name)) state[name]=!state[name];
+  else if (['specific','org','any'].includes(name)) state.target=name;
+  else if (['view','edit'].includes(name)) state.access=name;
+  else if (name==='forward') state.forwarded=!state.forwarded;
+  demo();
+}
+function readHash() {
+  const match = /^#chapter-([1-8])$/.exec(location.hash);
+  return match ? Number(match[1])-1 : 0;
+}
+function navigate(n) {
+  if (n<0 || n>=lessons.length) return;
+  if (location.hash===`#chapter-${n+1}`) show(n);
+  else location.hash = 'chapter-'+(n+1);
+}
+document.addEventListener('click',event=>{
+  const button = event.target.closest('button');
+  if (!button) return;
+  if (button.dataset.chapter !== undefined) navigate(Number(button.dataset.chapter));
+  if (button.dataset.action) action(button.dataset.action);
+});
+window.addEventListener('hashchange',()=>show(readHash()));
+show(readHash(),false);
+</script>
+</html>
